@@ -9,7 +9,7 @@
 }
 body{
     color:#6e6b74;
-    background-color: antiquewhite;
+    background-color: #fff;
 }
 
 
@@ -127,4 +127,207 @@ header div > nav a{
     color: #fff;
     width: fit-content;
     font-weight: 600;
+}
+
+
+
+/* ===== About =====*/
+
+.about{
+    margin: 8em 0;
+}
+.about > .container{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.about .about-img{
+    width: 50% ;
+}
+.about .about-img > img{
+    width: 100%;
+    min-width:300px;
+    max-width: 500px;
+}
+
+.about-content{
+    width: 50% ;
+    padding: 0 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-content h2{
+    font-size: 3rem;
+    font-family: 'karla';
+    color: #2D2640;
+    margin-bottom: .7em;
+}
+
+
+.about-content p{
+    color: #6e6b74;
+    margin-bottom: .7em;
+    font-size: 1.2rem;
+    line-height: 30px;
+    margin-bottom: 1.3em;
+}
+
+.about-content a{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 600;
+    color:#6e6b74;
+    width: fit-content;
+    display: inline-block;
+
+}
+
+
+/* ===== Feature =====*/
+
+
+.feature-parent-title{
+    font-size: 3rem;
+    font-family: 'karla';
+    color: #2D2640;
+    font-weight: 700;
+    padding-top: .3em;
+    border-top: 2px solid #6e6b74;
+}
+
+.feature-cols{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3em 0em;
+}
+
+
+.icon-box{
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    background-color: #8ab4f0;
+    text-align: center;
+    position: relative;
+    border-radius: 50px;
+    margin-bottom: 2em;
+}
+
+.icon-box i {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color:#fff;
+}
+
+
+.feature-col-title{
+    font-size: 2rem;
+    font-family: 'karla';
+    color: #2D2640;
+    margin-bottom: .5em;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.feature-col-parag{
+    line-height: 25px;
+}
+
+/* ===== Contact =====*/
+
+
+.contact .container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2D2640;
+    padding: 6em 4rem;
+}
+
+.contact-title{
+    font-size: 3rem;
+    font-family: 'karla';
+    color: white;
+}
+
+
+.contact-btn{
+    padding: .8em .75em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1.5px solid #ffffff;
+    border-radius: 3px;
+    color: #fff;
+    width: fit-content;
+    font-weight: 600;
+}
+
+/* ===== bottom nav =====*/
+.bottom-nav .container{
+    padding-top: 4em;
+}
+.bottom-nav-primary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #6e6b74;
+}
+
+.bottom-nav-primary-social{
+    display: flex;
+    gap: 20px;
+}
+.bottom-nav-primary-title{
+    font-size: 2.2rem;
+    font-family: 'karla';
+    font-weight: 700;
+    color: #2D2640;
+}
+
+
+.bottom-nav-secondary nav  ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bottom-nav-secondary nav li{
+    padding: 2em;
+}
+
+
+.bottom-nav-secondary nav a{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    color:#6e6b74;
+    letter-spacing: 1px;
+}
+
+
+/* ===== footer =====*/
+footer{
+    background-color: #2D2640;
+}
+footer .container{
+    text-align: center;
+    padding: 2.2em;
+    box-sizing: border-box;
+
+}
+
+footer .container p{
+    font-size: 1.2rem;
+    color: #cbc9c9;
 }
