@@ -25,27 +25,30 @@ header{
 
 }
 
-header > div{
+header .container {
     display: flex;
     justify-content: space-between;
     align-items:center;
     padding: 1em 0em;
 }
 
-header div > p {
+.logo > a {
     font-size: 2.2rem;
     font-family: 'karla';
     font-weight: 700;
     color: #2D2640;
+    text-decoration: none;
 }
 
-header div > nav  ul{
+header  nav >  ul{
     padding: 0;
     list-style: none;
-    display: inline-block;
+    display:flex;
+    flex-direction: row;
+    border: 1px solid greenyellow;
 }
 
-header div > nav li{
+header  nav li{
     padding: 1em 1.5em;
 }
 
@@ -60,6 +63,15 @@ header div > nav li:last-child{
 }
 
 
+.view-plans:hover,
+.view-plans:active{
+
+    color:#fff;
+    background-color: #2D2640;
+}
+
+
+
 header div > nav a{
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -67,6 +79,17 @@ header div > nav a{
     font-weight: 600;
     color:#6e6b74;
 }
+
+header div > nav a:hover,
+header div > nav a:active
+{
+    color: #2D2640;
+}
+
+
+/* ==== Menu ====*/
+
+
 
 
 /* ===== hero ===== */
@@ -100,6 +123,7 @@ header div > nav a{
 
 .hero-img > img{
     width: 100%;
+    border-radius: 10px;
 }
 
 .hero-content-title{
@@ -129,6 +153,12 @@ header div > nav a{
     font-weight: 600;
 }
 
+.hero-content > a:hover,
+.hero-content > a:active{
+
+    color: #2D2640;
+    background-color: #fff;
+}
 
 
 /* ===== About =====*/
@@ -136,6 +166,7 @@ header div > nav a{
 .about{
     margin: 8em 0;
 }
+
 .about > .container{
     display: flex;
     flex-direction: row;
@@ -145,6 +176,7 @@ header div > nav a{
 .about .about-img{
     width: 50% ;
 }
+
 .about .about-img > img{
     width: 100%;
     min-width:300px;
@@ -157,6 +189,7 @@ header div > nav a{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .about-content h2{
@@ -183,9 +216,13 @@ header div > nav a{
     color:#6e6b74;
     width: fit-content;
     display: inline-block;
-
 }
 
+.about-content a:hover,
+.about-content a:active{
+    color:#fff;
+    background-color: #2D2640;
+}
 
 /* ===== Feature =====*/
 
@@ -270,6 +307,13 @@ header div > nav a{
     font-weight: 600;
 }
 
+.contact-btn:hover,
+.contact-btn:active
+{
+    color: #2D2640;
+    background-color: #fff;
+}
+
 /* ===== bottom nav =====*/
 .bottom-nav .container{
     padding-top: 4em;
@@ -285,6 +329,9 @@ header div > nav a{
 .bottom-nav-primary-social{
     display: flex;
     gap: 20px;
+}
+.bottom-nav-primary-social i{
+    color: #2D2640;
 }
 .bottom-nav-primary-title{
     font-size: 2.2rem;
@@ -316,6 +363,11 @@ header div > nav a{
 }
 
 
+.bottom-nav-secondary nav a:hover,
+.bottom-nav-secondary nav a:active{
+    color:#2D2640;
+}
+
 /* ===== footer =====*/
 footer{
     background-color: #2D2640;
@@ -330,4 +382,113 @@ footer .container{
 footer .container p{
     font-size: 1.2rem;
     color: #cbc9c9;
+}
+
+
+/* ===== Media queries =====*/
+
+@media(max-width:860px){
+    .hero .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-content{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-img{
+        width: 100%;
+        margin-top: 3em;
+    }
+    .hero-content-description{
+        line-height: 2em;
+        font-size: 1.2em;
+        opacity: 0.8;
+        max-width: 600px;
+    }
+
+    .hero-content-description{
+        max-width: 600px;
+    }
+
+    .hero-content > a{
+    margin-top: 1.5em;
+    }
+
+
+    /* ===== about ===== */
+    .about .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img{
+        width: 100% !important;
+        min-width:300px;
+        max-width: 400px;
+        order: 2;
+
+        }
+
+    .about-img img{
+        width: 100%;
+        min-width: auto !important;
+
+    }
+
+    .about-content{
+        width: 100%;
+        text-align: center;
+        order: 1;
+    }
+
+    .about-content a{
+        text-align: center;
+        margin: 1.5em auto;
+
+    }
+
+    .about-content p{
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .feature-cols{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-col{
+        margin-bottom: 3em;
+    }
+    .icon-box{
+        margin: 0 auto;
+        margin-bottom: 1em;
+    }
+    .contact .container{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-btn{
+        margin-top: 1em;
+    }
+
+
+    header > .container {
+        flex-direction: column;
+    }
+
+    .bottom-nav-secondary nav ul  {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .bottom-nav-secondary nav ul li  {
+        flex: 30%;
+        padding:1em;
+    }
 }
