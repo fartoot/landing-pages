@@ -45,7 +45,6 @@ header  nav >  ul{
     list-style: none;
     display:flex;
     flex-direction: row;
-    border: 1px solid greenyellow;
 }
 
 header  nav li{
@@ -490,5 +489,19 @@ footer .container p{
     .bottom-nav-secondary nav ul li  {
         flex: 30%;
         padding:1em;
+    }
+}
+
+@media(max-width:600px){
+    header  nav >  ul{
+        padding: 0;
+        list-style: none;
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header  ul > li{
+        padding-right: 0;
     }
 }
